@@ -128,7 +128,7 @@ function addCar(image, animationTime) {
     var car = carContainer.image(image).size(4.8 * carScale, 1.8 * carScale);
     let boundingBoxMax = Math.sqrt(Math.pow(4.8 * carScale, 2) * 2);
     carContainer.rect(boundingBoxMax, boundingBoxMax).fill('transparent');
-    car.move(boundingBoxMax / 2 - 4.8 * carScale / 2, boundingBoxMax / 2 - 1.8 * carScale / 2);
+    car.move(-1 * (boundingBoxMax / 2 - 4.8 * carScale / 2), -1 * (boundingBoxMax / 2 - 1.8 * carScale / 2);
 
     //var car = carContainer.rect(4.8 * carScale, 1.8 * carScale).stroke(1).fill('transparent').attr({ 'stroke-width': 1 })
 
@@ -142,19 +142,19 @@ function addCar(image, animationTime) {
         if (distance < oneToTwo) {
             car.rotate(0);
         } else if (distance < twoToThree) {
-            car.rotate(360-((distance - oneToTwo) / scalledTurnArc * 90));
+            car.rotate((distance - oneToTwo) / scalledTurnArc * 90);
         } else if (distance < threeToFour) {
-            car.rotate(360-90);
+            car.rotate(90);
         } else if (distance < fourToFive) {
-            car.rotate(360-(90 + (distance - threeToFour) / scalledTurnArc * 90));
+            car.rotate(90 + (distance - threeToFour) / scalledTurnArc * 90);
         } else if (distance < fiveToSix) {
-            car.rotate(360-180);
+            car.rotate(80);
         } else if (distance < sixToSeven) {
-            car.rotate(360-(180 + (distance - fiveToSix) / scalledTurnArc * 90));
+            car.rotate(180 + (distance - fiveToSix) / scalledTurnArc * 90);
         } else if (distance < sevenToEight) {
-            car.rotate(360-270);
+            car.rotate(270);
         } else if (distance < eightToOne) {
-            car.rotate(360-(270 + (distance - sevenToEight) / scalledTurnArc * 90));
+            car.rotate(270 + (distance - sevenToEight) / scalledTurnArc * 90);
         }
     }).loop(true, false)
 }
