@@ -159,7 +159,7 @@ function addCar(image, animationTime) {
     }).loop(true, false)
 }
 
-addCar('car.png', 1);
+addCar('car.png', 13000);
 addCar('orange.png', 15000);
 addCar('car_red.png', 20000);
 addCar('blue.png', 18000);
