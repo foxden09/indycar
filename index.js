@@ -128,7 +128,7 @@ function addCar(image, animationTime) {
     var car = carContainer.image(image).size(4.8 * carScale, 1.8 * carScale);
     let boundingBoxMax = Math.sqrt(Math.pow(4.8 * carScale, 2) * 2);
     carContainer.rect(boundingBoxMax, boundingBoxMax).fill('transparent');
-    car.move(3, 3);
+    car.move(boundingBoxMax / 2 - 4.8 * carScale / 2, boundingBoxMax / 2 - 1.8 * carScale / 2);
 
     //var car = carContainer.rect(4.8 * carScale, 1.8 * carScale).stroke(1).fill('transparent').attr({ 'stroke-width': 1 })
 
@@ -159,7 +159,7 @@ function addCar(image, animationTime) {
     }).loop(true, false)
 }
 
-addCar('car.png', 13000);
+addCar('car.png', 1);
 addCar('orange.png', 15000);
 addCar('car_red.png', 20000);
 addCar('blue.png', 18000);
