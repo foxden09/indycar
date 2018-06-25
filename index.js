@@ -142,11 +142,11 @@ function addCar(image, animationTime) {
         if (distance < oneToTwo) {
             car.rotate(0);
         } else if (distance < twoToThree) {
-            car.rotate((distance - oneToTwo) / scalledTurnArc * 90);
+            car.rotate((distance - oneToTwo) / scalledTurnArc * 0);
         } else if (distance < threeToFour) {
-            car.rotate(90);
+            car.rotate(0);
         } else if (distance < fourToFive) {
-            car.rotate(90 + (distance - threeToFour) / scalledTurnArc * 90);
+            car.rotate(0 + (distance - threeToFour) / scalledTurnArc * 0);
         } else if (distance < fiveToSix) {
             car.rotate(180);
         } else if (distance < sixToSeven) {
