@@ -128,7 +128,7 @@ function addCar(image, animationTime) {
     var car = carContainer.image(image).size(4.8 * carScale, 1.8 * carScale);
     let boundingBoxMax = Math.sqrt(Math.pow(4.8 * carScale, 2) * 2);
     carContainer.rect(boundingBoxMax, boundingBoxMax).fill('transparent');
-    car.move(boundingBoxMax / 2 - 4.8 * carScale / 2, boundingBoxMax / 2 - 1.8 * carScale / 2);
+    car.move(3, 3);
 
     //var car = carContainer.rect(4.8 * carScale, 1.8 * carScale).stroke(1).fill('transparent').attr({ 'stroke-width': 1 })
 
