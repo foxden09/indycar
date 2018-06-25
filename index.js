@@ -140,21 +140,21 @@ function addCar(image, animationTime) {
         let distance = length * pos;
         //handling car rotation at arcs and long runways
         if (distance < oneToTwo) {
-            car.rotate(0);
+            car.rotate(360);
         } else if (distance < twoToThree) {
             car.rotate((distance - oneToTwo) / scalledTurnArc * 90);
         } else if (distance < threeToFour) {
-            car.rotate(360-90);
+            car.rotate(90);
         } else if (distance < fourToFive) {
-            car.rotate(360-(90 + (distance - threeToFour) / scalledTurnArc * 90));
+            car.rotate(90 + (distance - threeToFour) / scalledTurnArc * 90);
         } else if (distance < fiveToSix) {
-            car.rotate(360-180);
+            car.rotate(180);
         } else if (distance < sixToSeven) {
-            car.rotate(360-(180 + (distance - fiveToSix) / scalledTurnArc * 90));
+            car.rotate(180 + (distance - fiveToSix) / scalledTurnArc * 90);
         } else if (distance < sevenToEight) {
-            car.rotate(360-270);
+            car.rotate(270);
         } else if (distance < eightToOne) {
-            car.rotate(360-(270 + (distance - sevenToEight) / scalledTurnArc * 90));
+            car.rotate(270 + (distance - sevenToEight) / scalledTurnArc * 90);
         }
     }).loop(true, false)
 }
