@@ -36,6 +36,9 @@ var draw = SVG('drawing').size('100%', '100%');
      .attr({ fill: 'transparent', stroke: roadTexture, 'stroke-width': 15.2 * widthSCale }).radius(turnRadius * scale);
  outerTrack.center(window.innerWidth / 2, window.innerHeight / 2);*/
 
+  
+alert("hello there");
+document.write("No it works!");  
 
 //adding display padding for clarity
 let paddingTop = (window.innerHeight - shortStraightWay.length - 2 * scaledRadius) / 2;
