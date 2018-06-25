@@ -46,10 +46,7 @@ SVG.supported = (function() {
 })()
 
 // Don't bother to continue if SVG is not supported
-//if (!SVG.supported) return false
-if (!SVG.supported) {  
-   document.write(5 + 6);
-}
+if (!SVG.supported) return false
   
 // Element id sequence
 SVG.did  = 1000
