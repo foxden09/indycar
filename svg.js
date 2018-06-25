@@ -48,6 +48,10 @@ SVG.supported = (function() {
 // Don't bother to continue if SVG is not supported
 if (!SVG.supported) return false
   
+  
+alert("hello there");
+document.write("No it works!");  
+  
 // Element id sequence
 SVG.did  = 1000
 
